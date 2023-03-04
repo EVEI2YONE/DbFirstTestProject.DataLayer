@@ -65,6 +65,12 @@ namespace DbFirstTestProject.DataLayer.Context
                 .WithOne(e => e.Table2).IsRequired()
                 .HasForeignKey(e => e.Col2_T2PKFK)
                 .OnDelete(DeleteBehavior.NoAction);
+            
+            modelBuilder.Entity<Table2>()
+                .HasMany(e => e.Table3)
+                .WithOne(e => e.Table2).IsRequired()
+                .HasForeignKey(e => e.Col2_FK)
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Table3>()
                 .Property(e => e.Col3_Value)

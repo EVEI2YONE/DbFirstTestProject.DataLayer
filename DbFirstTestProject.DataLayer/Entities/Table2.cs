@@ -20,6 +20,7 @@ namespace DbFirstTestProject.DataLayer.Entities
         public int Col5_Extra { get; set; }
 
         public virtual Table1 Table1 { get; set; }
+        public virtual ICollection<Table3> Table3 { get; set; }
         public virtual ICollection<Table4> Table4 { get; set; }
     }
 }
