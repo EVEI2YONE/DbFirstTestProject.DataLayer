@@ -15,8 +15,8 @@ namespace DbFirstTestProject.DataLayer.Entities
 
         public int Col1_PK { get; set; }
         public long Col2_FK { get; set; }
-        public string Col3_Value { get; set; }
-        public string Col4_Extra { get; set; }
+        public string? Col3_Value { get; set; }
+        public string? Col4_Extra { get; set; }
         public int Col5_Extra { get; set; }
 
         public virtual Table1 Table1 { get; set; }
