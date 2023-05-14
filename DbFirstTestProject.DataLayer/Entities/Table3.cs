@@ -22,7 +22,6 @@ namespace DbFirstTestProject.DataLayer.Entities
         public string Col3_Value { get; set; }
         public int? Col4_Extra { get; set; }
         public string? Col5_Extra { get; set; }
-
         public virtual Table1 Table1 { get; set; }
         public virtual Table2 Table2 { get; set; }
         public virtual ICollection<Table4> Table4 { get; set; }
