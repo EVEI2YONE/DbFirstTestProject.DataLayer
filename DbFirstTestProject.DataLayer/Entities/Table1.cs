@@ -2,10 +2,12 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace DbFirstTestProject.DataLayer.Entities
 {
     [PrimaryKey(nameof(Col1_PK))]
+    [DebuggerDisplay("T1.PK: {Col1_PK}")]
     public class Table1
     {
         public Table1()
@@ -15,6 +17,7 @@ namespace DbFirstTestProject.DataLayer.Entities
             Table4 = new HashSet<Table4>();
         }
 
+        [Key]
         public long Col1_PK { get; set; }
         public string? Col2 { get; set; }
         public int? Col3 { get; set; }
