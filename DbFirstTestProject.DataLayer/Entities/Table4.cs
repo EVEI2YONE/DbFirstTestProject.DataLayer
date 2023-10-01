@@ -1,12 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace DbFirstTestProject.DataLayer.Entities
 {
-    [PrimaryKey(nameof(Col1_T1PKFK), nameof(Col2_T2PKFK), 
+    [PrimaryKey(nameof(Col1_T1PKFK), nameof(Col2_T2PKFK),
         nameof(Col3_T3PKFK_PKFK), nameof(Col4_T3PKFK_FK))]
     [DebuggerDisplay("T1.PK: {Col1_T1PKFK}, T2.PK: {Col2_T2PKFK}, T3.PK1: {Col3_T3PKFK_PKFK}, T3.PK2: {Col4_T3PKFK_FK}")]
     public class Table4

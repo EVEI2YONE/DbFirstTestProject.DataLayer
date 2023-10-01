@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using DbFirstTestProject.DataLayer.Entities;
+﻿using DbFirstTestProject.DataLayer.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace DbFirstTestProject.DataLayer.Context
 {
@@ -65,7 +62,7 @@ namespace DbFirstTestProject.DataLayer.Context
                 .WithOne(e => e.Table2).IsRequired()
                 .HasForeignKey(e => e.Col2_T2PKFK)
                 .OnDelete(DeleteBehavior.NoAction);
-            
+
             modelBuilder.Entity<Table2>()
                 .HasMany(e => e.Table3)
                 .WithOne(e => e.Table2).IsRequired()
